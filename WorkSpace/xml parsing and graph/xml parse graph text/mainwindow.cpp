@@ -12,7 +12,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    outputTextEdit = findChild<QTextEdit *>("outputTextEdit"); // Initialize outputTextEdit
+   // outputTextEdit = findChild<QTextEdit *>("outputTextEdit"); // Initialize outputTextEdit
 }
 
 MainWindow::~MainWindow()
@@ -20,15 +20,16 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::appendToOutput(const QString &text)
+void MainWindow::on_userdialog_clicked()
 {
-    outputTextEdit->append(text);
-}
+    QDialog *dialog = new QDialog();
+    dialog -> setWindowModality(Qt::WindowModality::ApplicationModal);
+    dialog -> setMinimumWidth(640);
+    dialog -> setMinimumHeight(640);
 
-void MainWindow::on_pushButton_clicked()
-{
+
     QString outputString;
-    QString filePath = "D:\\workspace\\QT_workspace\\xmlparse\\sample.xml";
+    QString filePath = "C:\\Users\\might\\Downloads\\CSE331-Data-Structure-and-Algorithms-Project\\WorkSpace\\xml parsing and graph\\xml parse graph text\\sample.xml";
     XMLparser *newParse = new XMLparser(filePath);
     QTextStream stream(stdout);
     stream.setString(&outputString);
@@ -65,42 +66,121 @@ void MainWindow::on_pushButton_clicked()
             graph.setAdjacencyListForVertex(users.at(j)->getId(),followers);
 
         }
-        graph.printGraph();
-        QString mostInfluential = graph.findMostInfluentialUser();
+        //graph.printGraph();
 
-        appendToOutput("");
-        appendToOutput("\nMost Influential User: " + mostInfluential);
-
-
+        /********** most active ****************************/
         QString MostActiveUser = graph.findMostActiveUser();
-        appendToOutput("\nMost Active User: " + MostActiveUser);
+        QLabel *active = new QLabel();
+        active-> setText("Most active user:");
+        active-> setGeometry(10,10,150,50);
+        active->setParent(dialog);
+        active->show();
 
-        QList<QString> MutualFollowers = graph.findMutualFollowers("3","2");;
+        QTextEdit *activeOP = new QTextEdit();
+        activeOP-> setGeometry(160,10,150,50);
+        activeOP->setParent(dialog);
+        activeOP->append(MostActiveUser);
+        activeOP->show();
 
-        for (int j = 0; j < MutualFollowers.size(); j++)
-        {
-            QString output = "\nMutual Followers: " + MutualFollowers.at(j);
-            appendToOutput(output);
-        }
+        /********** most influence ****************************/
+        QString mostInfluential = graph.findMostInfluentialUser();
+        QLabel *influence = new QLabel();
+        influence-> setText("Most Influential user:");
+        influence-> setGeometry(10,80,150,50);
+        influence->setParent(dialog);
+        influence->show();
 
-        QList<QString> SuggestFollowers = graph.suggestUsersToFollow("2");;
-        for (int j = 0; j < SuggestFollowers.size(); j++)
-        {
-            QString output = "\nSuggest Followers: " + SuggestFollowers.at(j);
-            appendToOutput(output);
-        }
+        QTextEdit *influenceOP = new QTextEdit();
+        influenceOP-> setGeometry(160,80,150,50);
+        influenceOP->setParent(dialog);
+        influenceOP->append(mostInfluential);
+        influenceOP->show();
 
-        QList<post*> userPosts;
-        for(int j = 0; j <users.size();j++){
-            userPosts.append(users.at(j)->getPosts());
-        }
-        QList<post*> foundPosts;
-        foundPosts.append(searchPosts("Lorem","solar_energy",userPosts));
-        for(int j = 0; j <foundPosts.size();j++){
-            QString output = "\n Post: " + foundPosts.at(j)->getBody();
-            appendToOutput(output);
-        }
+        /************ *******************************/
+        QLabel *muatualLabel = new QLabel();
+        muatualLabel-> setText("Mutual Followers between:");
+        muatualLabel-> setGeometry(10,160,150,50);
+        muatualLabel->setParent(dialog);
+        muatualLabel->show();
 
+        QTextEdit *mutual1 = new QTextEdit();
+        mutual1-> setToolTip("Enter value of first user");
+        mutual1-> setGeometry(160,160,150,50);
+        mutual1->setParent(dialog);
+        mutual1->show();
+
+        QTextEdit *mutual2 = new QTextEdit();
+        mutual2-> setToolTip("Enter value of second user");
+        mutual2-> setGeometry(320,160,150,50);
+        mutual2->setParent(dialog);
+        mutual2->show();
+
+        QPushButton *Mutualbutton = new QPushButton("Get Mutual Followers");
+        Mutualbutton->setGeometry(480, 160, 120, 50);
+        Mutualbutton->setParent(dialog);
+        Mutualbutton->show();
+
+        QTextEdit *mutualOP = new QTextEdit();
+        mutualOP->setGeometry(10, 240, 600, 50);
+        mutualOP->setParent(dialog);
+        mutualOP->show();
+        connect(Mutualbutton, &QPushButton::clicked, [=]() {
+            // Retrieve the text from mutual1 and mutual2
+            QString user1 = mutual1->toPlainText();
+            QString user2 = mutual2->toPlainText();
+            // Call the function with the entered values
+            QList<QString> MutualFollowers = graph.findMutualFollowers(user1, user2);
+            // Append the result to mutualOP
+            for (int j = 0; j < MutualFollowers.size(); j++)
+            {
+                QString output = MutualFollowers.at(j) + "  ";
+                mutualOP->append(output);
+            }
+
+        });
+
+        /*********************************************/
+        QLabel *suggestlLabel = new QLabel();
+        suggestlLabel-> setText("Suggest followers for:");
+        suggestlLabel-> setGeometry(10,310,150,50);
+        suggestlLabel->setParent(dialog);
+        suggestlLabel->show();
+
+        QTextEdit *suggest = new QTextEdit();
+        suggest-> setToolTip("Enter value of user");
+        suggest-> setGeometry(160,310,150,50);
+        suggest->setParent(dialog);
+        suggest->show();
+
+        QPushButton *suggestbutton = new QPushButton("Get sugggestions");
+        suggestbutton->setGeometry(480, 310, 120, 50);
+        suggestbutton->setParent(dialog);
+        suggestbutton->show();
+
+        QTextEdit *suggestOP = new QTextEdit();
+        suggestOP-> setGeometry(10,380,600,50);
+        suggestOP->setParent(dialog);
+        suggestOP->show();
+
+        connect(suggestbutton, &QPushButton::clicked, [=]() {
+            QString user = suggest->toPlainText();
+            QList<QString> SuggestFollowers = graph.suggestUsersToFollow(user);
+            for (int j = 0; j < SuggestFollowers.size(); j++)
+            {
+                QString output = SuggestFollowers.at(j) + "  ";
+                suggestOP->append(output);
+            }
+
+        });
+
+        QPushButton *closebutton = new QPushButton("CLOSE");
+        closebutton->setGeometry(260, 450, 120, 50);
+        closebutton->setParent(dialog);
+        closebutton->show();
+
+        connect(closebutton, &QPushButton::clicked, [=]() {
+            dialog->close();
+        });
 
 
     }
@@ -108,4 +188,8 @@ void MainWindow::on_pushButton_clicked()
     {
         delete newParse;
     }
+
+
+   dialog -> show();
 }
+

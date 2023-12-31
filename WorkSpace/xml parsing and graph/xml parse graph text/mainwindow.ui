@@ -14,40 +14,22 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="userdialog">
     <property name="geometry">
      <rect>
-      <x>260</x>
-      <y>330</y>
-      <width>93</width>
-      <height>29</height>
+      <x>132</x>
+      <y>308</y>
+      <width>211</width>
+      <height>121</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>24</pointsize>
+     </font>
     </property>
     <property name="text">
-     <string>PushButton</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>260</y>
-      <width>63</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
-    </property>
-   </widget>
-   <widget class="QTextEdit" name="outputTextEdit">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>70</y>
-      <width>411</width>
-      <height>181</height>
-     </rect>
+     <string>press me</string>
     </property>
    </widget>
   </widget>

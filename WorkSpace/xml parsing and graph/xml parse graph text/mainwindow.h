@@ -5,7 +5,9 @@
 
 #include <QMainWindow>
 #include <QTextEdit>  // Include QTextEdit
-
+#include <QDialog>
+#include <QLineEdit>
+#include <QLabel>
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -23,6 +25,8 @@ public:
 private slots:
     void on_pushButton_clicked();
     void appendToOutput(const QString &text);  // Add this line
+
+    void on_userdialog_clicked();
 
 private:
     Ui::MainWindow *ui;
