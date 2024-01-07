@@ -51,7 +51,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 24,
+				"line" : 57,
 				"parent" : 0
 			},
 			{
@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 67,
+				"line" : 100,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 50,
+				"line" : 83,
 				"parent" : 0
 			},
 			{
@@ -374,20 +374,33 @@
 				0,
 				1,
 				2,
+				5,
 				7,
 				9,
-				12
+				11,
+				13,
+				16,
+				18,
+				20,
+				22,
+				24,
+				26,
+				28,
+				30,
+				34,
+				36,
+				39
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"id" : "DS_Project_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "DS_Project_autogen::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "DS_Project_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "DS_Project::@6890427a1f51a3e7e1df",
@@ -500,9 +513,22 @@
 				0,
 				1,
 				2,
+				5,
 				7,
 				9,
-				12
+				11,
+				13,
+				16,
+				18,
+				20,
+				22,
+				24,
+				26,
+				28,
+				30,
+				34,
+				36,
+				39
 			]
 		},
 		{
@@ -512,7 +538,21 @@
 				3,
 				6,
 				8,
-				10
+				10,
+				12,
+				14,
+				15,
+				17,
+				19,
+				21,
+				23,
+				25,
+				27,
+				29,
+				31,
+				33,
+				35,
+				37
 			]
 		},
 		{
@@ -520,16 +560,16 @@
 			"sourceIndexes" : 
 			[
 				4,
-				5,
-				11
+				32,
+				38
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				13,
-				14
+				40,
+				41
 			]
 		}
 	],
@@ -563,6 +603,154 @@
 			"backtrace" : 4,
 			"path" : "mainwindow.ui",
 			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "CompressionSystem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "CompressionSystem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "DecompressSystem.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "DecompressSystem.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "HuffmanComp.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "HuffmanComp.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "HuffmanDec.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "HuffmanDec.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "HuffmanTree.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "HuffmanTree.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "HuffmanTreeNode.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "ClearClosingTagsComp.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ClearClosingTagsComp.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "ClearClosingTagsDec.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ClearClosingTagsDec.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "Tree.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "Tree.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "TreeNode.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "TreeNode.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "MinifyingXML.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "MinifyingXML.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "TagsMapComp.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "TagsMapComp.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "TagsMapDec.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "TagsMapDec.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "Map.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "Map.h",
+			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,

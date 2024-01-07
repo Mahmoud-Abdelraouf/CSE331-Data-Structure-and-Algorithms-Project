@@ -458,6 +458,33 @@ DS_Project_autogen/timestamp: \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wctype.h \
   D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/CMakeLists.txt \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/ClearClosingTagsComp.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/ClearClosingTagsComp.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/ClearClosingTagsDec.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/ClearClosingTagsDec.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/CompressionSystem.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/CompressionSystem.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/DecompressSystem.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/DecompressSystem.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/HuffmanComp.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/HuffmanComp.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/HuffmanDec.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/HuffmanDec.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/HuffmanTree.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/HuffmanTree.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/HuffmanTreeNode.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/Map.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/Map.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/MinifyingXML.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/MinifyingXML.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/TagsMapComp.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/TagsMapComp.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/TagsMapDec.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/TagsMapDec.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/Tree.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/Tree.h \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/TreeNode.cpp \
+  D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/TreeNode.h \
   D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/images/resources.qrc \
   D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/main.cpp \
   D:/Projects/Software/CSE331-Data-Structure-and-Algorithms-Project/WorkSpace/DS_Project/mainwindow.cpp \
